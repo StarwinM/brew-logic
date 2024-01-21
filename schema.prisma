@@ -1,0 +1,20 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:123@localhost:5432/postgres?schema=public"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Drink {
+    id Int @id @default(autoincrement())
+    name String @unique
+    amount Int
+    description String
+}
+
+model Type {
+    id Int @id @default(autoincrement())
+    name String @unique
+}
