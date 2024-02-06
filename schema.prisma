@@ -14,7 +14,9 @@ model Drink {
   description String
 }
 
-model Type {
-  id   Int    @id @default(autoincrement())
-  name String @unique
+model Food {
+  id          Int    @id @default(autoincrement())
+  name        String @unique
+  weight      Int
+  description String
 }
